@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{b6989971-93d7-4571-ab1b-3663c10c0ea0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="script">
+      <UniqueIdentifier>{63830f7a-87c4-47dc-bf51-df4c01139b82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resource">
+      <UniqueIdentifier>{8314e10a-a521-4425-8994-60622308914e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\sample">
+      <UniqueIdentifier>{9e1b689d-b59b-44fb-8475-2e2b071f0a43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\util">
+      <UniqueIdentifier>{01677e0f-8f89-42fb-9c78-032c38bdb6a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\jpf">
+      <UniqueIdentifier>{3d55fc73-be63-4cd2-95bd-701fb1ddd54d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="kernel.cu">
+      <Filter>src</Filter>
+    </CudaCompile>
+    <CudaCompile Include="src\sample\reduce.cu">
+      <Filter>src\sample</Filter>
+    </CudaCompile>
+    <CudaCompile Include="src\main.cu">
+      <Filter>src</Filter>
+    </CudaCompile>
+    <CudaCompile Include="src\sample\cuda_stream.cu">
+      <Filter>src\sample</Filter>
+    </CudaCompile>
+    <CudaCompile Include="src\sample\reduce_test.cu">
+      <Filter>src\sample</Filter>
+    </CudaCompile>
+    <CudaCompile Include="src\jpf\jpf_test.cu">
+      <Filter>src\jpf</Filter>
+    </CudaCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\test_base.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sample\reduce.cuh">
+      <Filter>src\sample</Filter>
+    </ClInclude>
+    <ClInclude Include="src\main.h" />
+    <ClInclude Include="src\sample\reduce_test.cuh">
+      <Filter>src\sample</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sample\cuda_stream.cuh">
+      <Filter>src\sample</Filter>
+    </ClInclude>
+    <ClInclude Include="src\util\cuda_smart_pointer.cuh">
+      <Filter>src\util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\util\cuda_stream_helper.cuh">
+      <Filter>src\util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\util\cuda_managed.h">
+      <Filter>src\util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\jpf\jpf_condition_cuda.cuh">
+      <Filter>src\jpf</Filter>
+    </ClInclude>
+    <ClInclude Include="src\jpf\jpf_condition_cuda_float.cuh">
+      <Filter>src\jpf</Filter>
+    </ClInclude>
+    <ClInclude Include="src\util\cuda_util.cuh">
+      <Filter>src\util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\jpf\jpf_test.cuh">
+      <Filter>src\jpf</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
