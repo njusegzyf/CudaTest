@@ -1,4 +1,4 @@
-#include "reduce_test.cuh"
+#include "sample_test.h"
 
 #include <stdio.h>
 
@@ -10,8 +10,8 @@
 #include "cuda_runtime.h"
 #include "device_launch_parameters.h"
 
-#include "reduce.cuh"
 #include "../util/cuda_smart_pointer.cuh"
+#include "reduce.cuh"
 
 //#define THREAD_SIZE (2048*2048)
 static constexpr size_t THREAD_SIZE = 2048 * 2048;
@@ -27,7 +27,7 @@ using std::endl;
 
 namespace cudatest {
 
-  int runReduceTest() {
+  void runReduceTest() {
 
     cudaError_t cudaStatus;
     int inputArrayByteSize = THREAD_SIZE * sizeof(float);
@@ -40,8 +40,7 @@ namespace cudatest {
     auto h_xs = std::make_unique<float[]>(THREAD_SIZE);
     auto h_outs = std::make_unique<float[]>(BLOCK_SIZE);
 
-    for (int i = 0; i < THREAD_SIZE; i++)
-    {
+    for (int i = 0; i < THREAD_SIZE; i++) {
       h_xs[i] = float(i);
     }
 
@@ -60,7 +59,7 @@ namespace cudatest {
     // record kernel start time
     auto reduceGlobalStartTime = system_clock::now(); // of type system_clock::time_point
 
-                                                      /* launch the kernel on the GPU */
+    /* launch the kernel on the GPU */
     cudatest::reduceGlobalKernel << <BLOCK_SIZE, THREADS_PER_BLOCK >> > (d_xs.get(), d_outs.get());
 
     // Check for any errors launching the kernel
@@ -94,9 +93,5 @@ namespace cudatest {
     //free(h_outs);
     //cudaFree(d_xs);
     //cudaFree(d_outs);
-
-    getchar();
-
-    return 0;
   }
 }

@@ -5,8 +5,9 @@ namespace cudatest {
     namespace comparsion {
 
       void runJpf52TestOnCpuSerial();
-
       void runJpf52TestOnCpuParallel();
+
+      void runJpfMultiConditionsTestOnCpuSerial();
     }
   }
 }

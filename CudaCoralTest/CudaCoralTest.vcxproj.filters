@@ -30,14 +30,17 @@
     <CudaCompile Include="src\main.cu">
       <Filter>src</Filter>
     </CudaCompile>
-    <CudaCompile Include="src\sample\cuda_stream.cu">
-      <Filter>src\sample</Filter>
-    </CudaCompile>
     <CudaCompile Include="src\sample\reduce_test.cu">
       <Filter>src\sample</Filter>
     </CudaCompile>
     <CudaCompile Include="src\jpf\jpf_test.cu">
       <Filter>src\jpf</Filter>
+    </CudaCompile>
+    <CudaCompile Include="src\jpf\jpf_test_float.cu">
+      <Filter>src\jpf</Filter>
+    </CudaCompile>
+    <CudaCompile Include="src\sample\stream_test.cu">
+      <Filter>src\sample</Filter>
     </CudaCompile>
   </ItemGroup>
   <ItemGroup>
@@ -48,12 +51,6 @@
       <Filter>src\sample</Filter>
     </ClInclude>
     <ClInclude Include="src\main.h" />
-    <ClInclude Include="src\sample\reduce_test.cuh">
-      <Filter>src\sample</Filter>
-    </ClInclude>
-    <ClInclude Include="src\sample\cuda_stream.cuh">
-      <Filter>src\sample</Filter>
-    </ClInclude>
     <ClInclude Include="src\util\cuda_smart_pointer.cuh">
       <Filter>src\util</Filter>
     </ClInclude>
@@ -66,14 +63,19 @@
     <ClInclude Include="src\jpf\jpf_condition_cuda.cuh">
       <Filter>src\jpf</Filter>
     </ClInclude>
-    <ClInclude Include="src\jpf\jpf_condition_cuda_float.cuh">
-      <Filter>src\jpf</Filter>
-    </ClInclude>
     <ClInclude Include="src\util\cuda_util.cuh">
       <Filter>src\util</Filter>
     </ClInclude>
     <ClInclude Include="src\jpf\jpf_test.cuh">
       <Filter>src\jpf</Filter>
     </ClInclude>
+    <ClInclude Include="src\sample\sample_test.h">
+      <Filter>src\sample</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resource\NsightActivity.nvact">
+      <Filter>resource</Filter>
+    </None>
   </ItemGroup>
 </Project>

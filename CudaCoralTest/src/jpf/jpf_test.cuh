@@ -6,5 +6,11 @@ namespace cudatest {
     void runJpf52Test();
 
     void runJpf52TestFloat();
+
+    void runJpfMultiConditionsTest();
+
+    void runJpfMultiConditionsTestFloat();
+
+    void runJpfMultiRepeatedConditionsTest();
   }
 }

@@ -173,24 +173,26 @@ copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"</Command>
   <ItemGroup>
     <CudaCompile Include="kernel.cu" />
     <CudaCompile Include="src\jpf\jpf_test.cu" />
+    <CudaCompile Include="src\jpf\jpf_test_float.cu" />
     <CudaCompile Include="src\main.cu" />
-    <CudaCompile Include="src\sample\cuda_stream.cu" />
+    <CudaCompile Include="src\sample\stream_test.cu" />
     <CudaCompile Include="src\sample\reduce.cu" />
     <CudaCompile Include="src\sample\reduce_test.cu" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\jpf\jpf_condition_cuda.cuh" />
-    <ClInclude Include="src\jpf\jpf_condition_cuda_float.cuh" />
     <ClInclude Include="src\jpf\jpf_test.cuh" />
     <ClInclude Include="src\main.h" />
-    <ClInclude Include="src\sample\cuda_stream.cuh" />
     <ClInclude Include="src\sample\reduce.cuh" />
-    <ClInclude Include="src\sample\reduce_test.cuh" />
+    <ClInclude Include="src\sample\sample_test.h" />
     <ClInclude Include="src\test_base.h" />
     <ClInclude Include="src\util\cuda_managed.h" />
     <ClInclude Include="src\util\cuda_smart_pointer.cuh" />
     <ClInclude Include="src\util\cuda_stream_helper.cuh" />
     <ClInclude Include="src\util\cuda_util.cuh" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resource\NsightActivity.nvact" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

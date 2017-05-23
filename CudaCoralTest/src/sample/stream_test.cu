@@ -1,4 +1,4 @@
-#include "cuda_stream.cuh"
+#include "sample_test.h"
 
 #include <iostream>
 #include <algorithm>
@@ -49,7 +49,7 @@ namespace cudatest {
   //}
 
   cudaError_t runStreamTest() {
-    cudaError_t cudaStatus;
+    cudaError_t cudaStatus = cudaSuccess;
 
     // 获取设备属性  
     cudaDeviceProp prop;
